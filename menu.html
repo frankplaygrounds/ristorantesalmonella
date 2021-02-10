@@ -1,0 +1,51 @@
+<html>
+    <body style="background-color: beige;">
+
+        <style>
+            .centra{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          </style>
+
+        <div class="centra">
+        <ul>
+            <li>1. Pizza (5$)</li>
+            <li>2. Sushi (15$)</li>
+            <li>3. Patatine Fritte (2.50$)</li>
+            <li>4. Hamburger (3$)</li>
+        </ul>
+        <input id="ordine" type="number">
+        <button onclick="read()">Conferma</button></input>
+        <p id="chosen"></p>
+        </div>
+
+        <script>
+        function read(){
+        var num = parseInt(document.getElementById("ordine").value);
+
+                switch(num) {
+        case 1:
+            num = 5;
+            break;
+        case 2:
+            num = 15;
+            break;
+        case 3:
+        num = 2.50;
+        break;
+        case 4:
+        num = 3;
+        break;
+        default:
+            num = "Numero invalido."
+        }
+
+        document.getElementById("chosen").innerHTML = num + "$";
+
+        }
+        </script>
+    </body>
+</html>
